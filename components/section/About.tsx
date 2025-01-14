@@ -3,7 +3,6 @@ import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import Image from 'next/image'
 import { BackgroundGradient } from "../ui/background-gradient"
-import { Code2, Laptop, Rocket } from "lucide-react"
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -12,14 +11,14 @@ const About = () => {
   })
 
   return (
-    <section id="about" className="md:p-20 p-5">
+    <section id="about" className="md:p-20 p-5 w-full">
       <div className="container">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col-reverse md:flex-row gap-12 items-center md:justify-between"
+          className="flex flex-col-reverse lg:flex-row gap-12 items-center md:justify-between"
         >
           <div className="">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>

@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Nav />
-        <div>
+        <div className="container mx-auto">
           {children}
         </div>
       </body>
