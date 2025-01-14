@@ -12,17 +12,17 @@ const About = () => {
 
   return (
     <section id="about" className="md:p-20 p-5 w-full">
-      <div className="container">
+      <div className="container w-full">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col-reverse lg:flex-row gap-12 items-center md:justify-between"
+          className="flex flex-col-reverse xl:flex-row gap-12 items-center"
         >
-          <div className="">
+          <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 text-justify">
             Hi there! 👋 I'm a Software Developer with a passion for building innovative and user-friendly 
             web applications. With expertise in the MERN stack, Spring Boot, System Design, Real-time 
             Collabration tool, and containerized environments, I love turning complex challenges into 
@@ -40,14 +40,14 @@ const About = () => {
             </div>
           </div>
 
-          <div className="w-1/2 h-1/2">
-          <BackgroundGradient className="rounded-full max-w-sm bg-white dark:bg-zinc-900">
+          <div className="w-1/2 h-1/2 ">
+          <BackgroundGradient className="rounded-full max-w-xl bg-white dark:bg-zinc-900">
             <Image 
               src="/image.png"
               alt='TheresPromptForIt Logo'
-              width={300}
-              height={300}
-              className="rounded-full" 
+              width={500}
+              height={500}
+              className="rounded-full w-full h-full" 
             />
           </BackgroundGradient>
           </div>
