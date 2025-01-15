@@ -20,7 +20,7 @@ const Nav = () => {
   const { setTheme, theme } = useTheme()
 
   return (
-    <div className="fixed w-full z-50 top-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="fixed w-full z-50 top-0  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between">
         <NavigationMenu>
           <NavigationMenuList>

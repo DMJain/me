@@ -28,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetbrainsMono.variable} ${pressStart2P.variable} font-mono`}>
-        <Nav />
+        
         <div className="container mx-auto">
+          <Nav />
           {children}
         </div>
       </body>
