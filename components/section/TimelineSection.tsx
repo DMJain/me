@@ -46,9 +46,9 @@ const TimelineSection = () => {
     },
   ];
   return (
-    <div className="w-full">
+    <section id="timeline" className="w-full">
       <Timeline data={data} />
-    </div>
+    </section>
   );
 }
 

@@ -58,9 +58,9 @@ export default function ContactSection() {
     });
     const result = await response.json();
     if (result.success) {
-        console.log(result);
+        // console.log(result);
     }
-    console.log(values)
+    // console.log(values)
   }
 
   return (

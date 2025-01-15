@@ -69,7 +69,7 @@ const featuredProjects: Project[] = [
     title: "BookThatMovie",
     description: "Watch your Fav movie near you.",
     longDescription: "A Movie booking application to find movies at your nearist theaters.",
-    image: "/projects/staynest.png",
+    image: "/projects/moviesite.png",
     tags: ["React", "NodeKs", "Socket-IO", "CashFree Payments"],
     liveUrl: "",
     githubUrl: "https://github.com/DMJain/MovieBookingApp",
@@ -135,6 +135,7 @@ export default function ProjectsSection() {
                       src={project.image}
                       alt={project.title}
                       fill
+                      sizes="100%"
                       className="object-cover"
                     />
                   </div>
@@ -151,12 +152,12 @@ export default function ProjectsSection() {
                       ))}
                     </div>
                     <div className="flex gap-2 mt-auto pt-4">
-                      <Button variant="outline" size="sm" className="gap-2" asChild>
+                      {/* <Button variant="outline" size="sm" className="gap-2" asChild>
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                           <ExternalLink className="h-4 w-4" />
                           Live Demo
                         </a>
-                      </Button>
+                      </Button> */}
                       <Button variant="outline" size="sm" className="gap-2" asChild>
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                           <Github className="h-4 w-4" />
