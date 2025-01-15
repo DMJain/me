@@ -1,8 +1,8 @@
 "use client"
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog"
-import { Badge } from "./ui/badge.tsx"
-import { Button } from "./ui/button.tsx";
+import { Badge } from "./ui/badge"
+import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 
