@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { Textarea } from "../ui/textarea"
+import { Textarea } from "../ui/texarea"
 import { Github, Linkedin, Mail, Send } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -25,7 +25,7 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 })
 
-export function ContactSection() {
+export default function ContactSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -40,8 +40,26 @@ export function ContactSection() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Handle form submission
+    
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({
+            access_key: process.env.NEXT_PUBLIC_EMAI_API_KEY,
+            name: values.name,
+            email: values.email,
+            message: values.message,
+        }),
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+    }
     console.log(values)
   }
 
@@ -134,21 +152,27 @@ export function ContactSection() {
               </CardHeader>
               <CardContent className="flex flex-col gap-4">
                 <Button variant="outline" className="w-full gap-2" asChild>
-                  <a href="mailto:your@email.com">
+                  <a href="mailto:darshan.j098@mail.com">
                     <Mail className="h-4 w-4" />
-                    your@email.com
+                    darshan.j098@gmail.com
                   </a>
                 </Button>
                 <Button variant="outline" className="w-full gap-2" asChild>
-                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/DMJain" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     GitHub Profile
                   </a>
                 </Button>
                 <Button variant="outline" className="w-full gap-2" asChild>
-                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/darshan-jain-3687291a7/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-4 w-4" />
                     LinkedIn Profile
+                  </a>
+                </Button>
+                <Button variant="outline" className="w-full gap-2" asChild>
+                  <a href="https://peerlist.io/darshanjain" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="-0.5 -0.5 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="Peerlist--Streamline-Iconoir" height="16" width="16"><desc>Peerlist Streamline Icon: https://streamlinehq.com</desc><path d="M5.234 0.98375h4.532c2.2135625 0 4.073125 1.6644375 4.3175625 3.8644374999999997l0.15256250000000002 1.3725c0.0945 0.8502500000000001 0.0945 1.708375 0 2.558625l-0.15256250000000002 1.3725c-0.2444375 2.2000625 -2.104 3.8644374999999997 -4.3175625 3.8644374999999997H5.234c-2.213625 0 -4.0731875 -1.664375 -4.317625 -3.8644374999999997l-0.1525 -1.3725c-0.09443750000000001 -0.8502500000000001 -0.09443750000000001 -1.708375 0 -2.558625l0.1525 -1.3725c0.2444375 -2.2 2.104 -3.8644374999999997 4.317625 -3.8644374999999997Z" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M5.327937499999999 11.120125000000002v-2.896125m0 0V3.8798749999999997h2.8960625c1.199625 0 2.172125 0.9724375000000001 2.172125 2.1720625h0c0 1.199625 -0.9724375000000001 2.1720625 -2.172125 2.1720625H5.327937499999999Z" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg>
+                    Peerlist Profile
                   </a>
                 </Button>
               </CardContent>
