@@ -85,7 +85,7 @@ export default function ContactSection() {
               <CardHeader>
                 <CardTitle>Get in Touch</CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  Fill out the form below and I&apos;ll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>

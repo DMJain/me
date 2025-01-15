@@ -2,7 +2,6 @@
 
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from "framer-motion"
-import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -52,12 +51,6 @@ const Hero = () => {
             Passionate about creating elegant solutions and delivering exceptional user experiences.
             Currently looking for great oppurtunities to contribute.
           </p>
-          {/* <Button size="lg" asChild>
-            <a href="#contact" className="gap-2">
-              Get in touch
-              <ArrowDown className="h-4 w-4" />
-            </a>
-          </Button> */}
         </motion.div>
       </div>
     </section>

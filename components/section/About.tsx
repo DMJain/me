@@ -23,18 +23,18 @@ const About = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground mb-6 text-justify">
-            Hi there! 👋 I'm a Software Developer with a passion for building innovative and user-friendly 
+            Hi there! 👋 I&apos;m a Software Developer with a passion for building innovative and user-friendly 
             web applications. With expertise in the MERN stack, Spring Boot, System Design, Real-time 
             Collabration tool, and containerized environments, I love turning complex challenges into 
-            elegant solutions. Currently pursuing my Master's in Computer Science at Woolf University 
-            (Scaler Neovarsity), I'm always exploring new ways to create impactful digital experiences.
+            elegant solutions. Currently pursuing my Master&apos;s in Computer Science at Woolf University 
+            (Scaler Neovarsity), I&apos;m always exploring new ways to create impactful digital experiences.
             <br /><br />
             Before transitioning to software development, I worked as a QA Engineer, where I sharpened my 
             attention to detail and delivered high-quality software solutions. Now, I bring that precision into 
             crafting robust, scalable, and intuitive applications.
             <br /><br />
-            I'm actively seeking exciting software development opportunities and am available for an immediate 
-            start. Let's connect and create something extraordinary! 🚀
+            I&apos;m actively seeking exciting software development opportunities and am available for an immediate 
+            start. Let&apos;s connect and create something extraordinary! 🚀
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             </div>
