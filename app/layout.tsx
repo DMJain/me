@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Press_Start_2P } from 'next/font/google';
-import { ThemeProvider } from 'next-themes';
+import { Inter, Playfair_Display } from "next/font/google";
+import { meta } from "@/lib/data";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 
-import Nav from '@/components/Nav';
-
-const jetbrainsMono = JetBrains_Mono({ 
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono'
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
 });
 
-const pressStart2P = Press_Start_2P({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-press-start-2p'
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Darshan jain",
-  description: "Portfolio of a software engineer. 🚀",
+  title: meta.siteTitle,
+  description: meta.siteDescription,
 };
 
 export default function RootLayout({
@@ -27,14 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${jetbrainsMono.variable} ${pressStart2P.variable} font-mono`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-        <div className="container mx-auto">
-          <Nav />
-          {children}
-        </div>
-        </ThemeProvider>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body>
+        <NavBar />
+        <main>{children}</main>
       </body>
     </html>
   );
