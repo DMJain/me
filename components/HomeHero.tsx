@@ -10,7 +10,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ size: number; strokeWidth: 
   peerlist: LinkIcon,
 };
 
-export default function HomeHero() {
+export default function HomeHero({ showWidgets = true }: { showWidgets?: boolean } = {}) {
   return (
     <section id="home" className="pt-14 pb-16 px-4 md:px-6 max-w-6xl mx-auto">
       {/* Upper section — 70 / 30 split on desktop */}
@@ -30,7 +30,7 @@ export default function HomeHero() {
               {personal.title}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-ink tracking-tight mb-6">
-              About Me
+              Yo! Darshan Here
             </h2>
             <div className="flex flex-col gap-4">
               {personal.bio.map((paragraph, i) => (
@@ -45,8 +45,8 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* Right column (30%, sticky on desktop) */}
-        <div className="contents md:flex md:flex-[3] md:flex-col md:gap-4 md:sticky md:top-22">
+        {/* Right column (30%, sticky centered in viewport) */}
+        <div className="contents md:flex md:flex-[3] md:flex-col md:gap-4 md:sticky md:top-[calc(50vh-12rem)]">
           {/* Profile photo */}
           <div className="order-2 rounded-3xl overflow-hidden aspect-[4/3] md:aspect-[4/5] relative">
             <Image
@@ -81,7 +81,7 @@ export default function HomeHero() {
       </div>
 
       {/* Bottom widgets */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+      {showWidgets && <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
         {/* Current Read */}
         <div className="aspect-square rounded-3xl border border-ink/10 bg-canvas-raised p-6 shadow-bento transition-shadow duration-250 hover:shadow-card-hover">
           <div className="flex flex-col justify-between h-full">
@@ -161,7 +161,7 @@ export default function HomeHero() {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
     </section>
   );
 }

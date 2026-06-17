@@ -15,14 +15,14 @@ export const personal = {
   name: "Darshan",
   fullName: "Darshan Jain",
   image: "/image.png",
-  title: "Senior Backend Engineer",
+  title: "Software Engineer",
   descriptors: ["Developer", "Architect", "Tifosi"],
   bio: [
-    "I'm a backend engineer from Bengaluru with 4+ years of experience building high-throughput systems in FinTech. My bread and butter is designing APIs, event-driven architectures, and distributed systems that scale — part-time Jira copilot.",
-    "I've shipped production services across the stack — from Spring Boot microservices backed by Kafka to real-time collaboration tools running on WebSocket. Currently building at Indihood, where I architect the platform that powers our creator-first ecosystem.",
-    "Before that, I worked as a QA Specialist at Dassault Systèmes in Pune, where I automated 50+ high-priority test cases and contributed to 9 major deployment releases with near-zero bug slippage. That attention to quality still shows up in everything I build.",
-    "Currently pursuing a Master's in Computer Science at Woolf University (Scaler Neovarsity), deepening my foundation in System Design and distributed computing. Alumnus of MIT ADT School of Engineering, Pune.",
-    "When I'm not writing code, I'm watching Formula 1, listening to 90s East Coast hip-hop, or arguing about whether DRS should be scrapped.",
+    "I'm a software engineer passionate about backend engineering, system architecture, and applied AI. Currently, I'm a Software Engineer at Indihood, where I focus on architecting complex workflows and designing APIs. We build scalable banking and enterprise systems that allow clients to effortlessly deploy solutions while we handle the secure, high-throughput infrastructure under the hood.",
+    "Previously, I was a QA/Automation Engineer at Dassault Systèmes, where I managed 2 product suites implementing critical automated workflows and maintaining comprehensive and detailed test suites. The experience drove me to understand and deep dive on how things work under the hood. On the side, I love to explore new engineering concepts and implement them in work or side projects.",
+    "In 2024, I took a leap of faith and started my Master's journey in Computer Science with Scaler Academy and Woolf University. This pivot allowed me to specialize in building resilient, high-throughput systems that simply don't break. It's where I truly grew into backend engineering, learning how to take a product from 0 to 1 and scale it beyond.",
+    "I love deep-diving into backend concepts through books, articles and YT videos, constantly exploring how to build systems at scale which doesn't break. On the side, I enjoy exploring new engineering concepts — whether that's wiring up new AI workflows, squeezing more performance out of a heavily modded Minecraft setup, or getting that extra tenth of a second out of the lap at Suzuka.",
+    "When I'm not exploring system internals, I'm a massive motorsport fan. I'm a dedicated Tifosi to the core, and you'll usually find me stressing over Ferrari, analyzing chess moves with Gotham Chess or ChessBrah India, or just kicking back watching tech videos and listening to modern/classic rock and 90s Bollywood music.",
   ],
 };
 

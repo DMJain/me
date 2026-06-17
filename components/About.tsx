@@ -4,7 +4,7 @@ import { experience, education, skills } from "@/lib/data";
 export default function About() {
   return (
     <>
-      <HomeHero />
+      <HomeHero showWidgets={false} />
 
       <section className="max-w-6xl mx-auto px-4 md:px-6 pb-18">
         {/* ── Unified Timeline ─────────────────────────────────── */}
